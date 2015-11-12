@@ -1,0 +1,224 @@
+Names: Christy Lentz, Hayden Reich, David Stone
+Title: Hipster Adventure Trail
+Vision: To create a fun and geographical informational game where the user can use
+strategies to overcome obstacles.
+Automated Unit Testing for Java:
+Used Junit as a way to run an automated test. TutorialsPoint.com offers a way to run your java
+code and implement tests.
+From TutorialsPoint.com:
+First I created a java class file named TestJunit. Then I created a java class file named
+TestRunner in order to execute Test cases. After compiling the classes, I could run the Test
+Runner. I wanted to test first to see if the welcome screen produced desired results:
+Compiling the source code....
+$javac AdventureTrail.java 2>&1
+Executing the program....
+$java Xmx128M
+Xms16M
+AdventureTrail
+===========================================
+Welcome
+to Adventure
+Trail Press
+enter to continue ===========================================
+testPrintMessage(TestJunit): expected:<[Welcome to Adventure Trail Press enter to continue]>
+was: < [Welcome to Adventure Trail Press enter to continue]>
+true
+Next I wanted to test to see if the Startup Menu would appear
+Compiling the source code....
+$javac AdventureTrail.java 2>&1
+Executing the program....
+$java Xmx128M
+Xms16M
+AdventureTrail
+===========================================
+Welcome
+to Adventure
+Trail 1.
+Create Character 2.
+New Game 3.
+Load Game 4.
+Help 5.
+Quit ===========================================
+testPrintMessage(TestJunit): expected:<[ Welcome to Adventure Trail 1.Create Character 2.
+New Game 3. Load Game 4. Help 5. Quit ]> was: :<[ Welcome to Adventure Trail 1.Create
+Character 2. New Game 3. Load Game 4. Help 5. Quit ]>
+true
+Next testing the Help Menu:
+Compiling the source code....
+$javac AdventureTrail.java 2>&1
+Executing the program....
+$java Xmx128M
+Xms16M
+AdventureTrail
+===========================================
+HELP
+In
+this game, the computer will give
+you a few options for actions on
+every turn. Simply type the instruction
+that corresponds to the action
+and press enter. good
+Luck and Happy Trails! Press
+enter to continue ===========================================
+testPrintMessage(TestJunit): expected:<[ HELP In this game, the computer will give you a few
+options for actions on every turn . Simply type the instruction that corresponds to the action and
+press enter. Good Luck and Happy Trails! Press enter to continue]> was: :<[ HELP In this
+game, the computer will give you a few options for actions on every turn . Simply type the
+instruction that corresponds to the action and press enter. Good Luck and Happy Trails! Press
+enter to continue]>
+true
+USER ACCEPTANCE TEST PLANS :
+Project Name: Adventure Trail
+Test Case ID: test_one Test Designed by: Christy Lentz
+Test Priority(Low/Medium/High): high Test Designed date: 11/8/2015
+Module Name: Game Welcome Screen Test Executed by: Christy
+Test Title:Information present on front screen Test Execution date:11/10/2015
+Description: test to see if welcome screen works
+Preconditions:
+User can run java
+Dependencies:
+Step Test Steps Test data expected
+results
+Actual
+results
+status P/F Notes
+1 enter folder
+containing game
+cd
+csci3308
+.java file
+present
+.java file
+present
+Pass
+2 Start game ./adventure
+trail.java
+Welcome
+screen of
+game
+should be
+displayed
+Welcome
+screen is
+displayed
+Pass “ Welcome
+to
+Adventure
+Trail Press
+enter to
+continue”
+Project Name: Adventure Trail
+Test Case ID: test_two Test Designed by: Christy Lentz
+Test Priority(Low/Medium/High): high Test Designed date: 11/10/2015
+Module Name: Game Menu Test Executed by: Christy
+Test Title:Game Menu functionality Test Execution date:11/10/2015
+Description: test to see if the game Menu displays
+Preconditions:
+User can run java
+Dependencies:
+Step Test Steps Test data expected
+results
+Actual
+results
+status
+P/F
+Notes
+1 enter folder
+containing
+game
+cd
+csci3308
+.java file
+present
+.java file
+present
+Pass
+2 Start game ./adventur
+etrail.java
+Welcome
+screen of
+game
+should be
+displayed
+Welcome
+screen is
+displayed
+Pass “ Welcome to
+Adventure Trail Press
+enter to continue”
+3. Press enter enter options to
+quit, start,
+info, etc
+Menu is
+printed
+Pass “ Welcome to
+Adventure Trail”
+1. create character
+2. new game
+3. load game
+4. Help
+5. quit
+Test Case ID: test_three Test Designed by: Christy Lentz
+Test Priority(Low/Medium/High): high Test Designed date: 11/10/2015
+Module Name: Enter Character Name Test Executed by: Christy
+Test Title: Creating a Character Test Execution date:11/10/2015
+Description: test to see if you can create a character
+Preconditions:
+User can run java
+Dependencies:
+Step Test Steps Test data expected
+results
+Actual
+results
+statu
+s P/F
+Notes
+1 enter folder
+containing
+game
+cd
+csci3308
+.java file
+present
+.java file
+present
+Pass
+2 Start game ./adventur
+etrail.java
+Welcome
+screen of
+game
+should be
+displayed
+Welcome
+screen is
+displayed
+Pass “ Welcome to
+Adventure Trail Press
+enter to continue”
+3. Press enter enter options to
+quit, start,
+info, etc
+Menu is
+printed
+Pass “ Welcome to
+Adventure Trail”
+1. create
+character
+2. New game
+3. load game
+4. help
+5. quit
+4. type 1 1 “ Please
+enter
+character’
+s name”
+“Welcome
+to
+Adventure
+Trail Please
+enter
+character’s
+name”
+Pass stores character name
+VCS: https://github.com/ChristyNova/3308_project
