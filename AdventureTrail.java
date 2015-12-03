@@ -3,94 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//package HipsterHighway;
+//package adventuretrail;
 
 import java.util.Scanner;
-import java.awt.*;
-import javax.swing.*;
-
-
-/* In order to use jPanel and painting:
-import java.awt.Graphics;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-*/
 
 /**
  *
- * @author hayden, David, Christy 
+ * @author hayden
  */
-public class HipsterHighway extends JPanel{
-
-	
-	
-	String NameCharacter = ("===========================================\n"
-            +"---             Welcome to              ---\n"
-            +"---           Adventure Trail           ---\n"
-            +"---                                     ---\n"
-            +"---  Please enter your character's      ---\n"
-            +"---  name:                              ---\n"
-            +"---                                     ---\n"
-            +"---                                     ---\n"
-            +"---                                     ---\n"
-            +"---                                     ---\n"
-            +"===========================================");
-	/*String NameCheck = ("===========================================\n"
-            +"---             Welcome to              ---\n"
-            +"---           Adventure Trail           ---\n"
-            +"---                                     ---\n"
-            +"---         That's a great name!        ---\n"
-            +"---     See you on the trail " + input +"!    ---\n"
-            +"---                                     ---\n"
-            +"---                                     ---\n"
-            +"---                                     ---\n"
-            +"---                                     ---\n"
-            +"===========================================");*/
-	String NewGame = ("New game coming soon!");
-	String LoadGame = ("Load game coming soon!");
-	String Help = ("===========================================\n"
-            +"---                 HELP                ---\n"
-            +"--- In this game, the computer will     ---\n"
-            +"--- give you a few options for actions  ---\n"
-            +"--- on every turn. Simply type the      ---\n"
-            +"--- instruction that corresponds to the ---\n"
-            +"--- action and press enter.             ---\n"
-            +"---     Good Luck and Happy Trails!     ---\n"
-            +"---                                     ---\n"
-            +"---       Press enter to continue       ---\n"
-            +"===========================================");
-	/*public static String UserInput(JFrame f){
-		String input = JOptionPane.showInputDialog(f, "");
-		return input;
-	}*/
-	
-
-
-
-//USING JPANEL and painting:
-
-	/*public void paintComponent(Graphics g){
-		super.paintComponent(g);
-		this.setBackground(Color.WHITE);
-		// This method is inherited from Component.
-   		// We over-write this method so we can
-   		// define our own graphics that we wish to paint on the the panel.
-		g.setColor(Color.BLACK);
-		g.drawLine(50, 50, 500, 50);
-		g.drawLine(50, 50, 50, 500);
-		g.drawLine(50,500,500,500);
-		g.drawLine(500, 500, 500, 50);
-		//g.drawString(HomeScreen, 50, 50);
-		//input = JOptionPane.showInputDialog("");
-		//if(input == "1"){
-			//g.drawString(NameCharacter, 50, 50);
-
-
-		Font f = g.getFont();			// retrieve current font
-		g.setFont(new Font("Serif", Font.ITALICS, 12)); 
-
-		//}
-	}*/
+public class AdventureTrail {
 
     /**
      * @param args the command line arguments
@@ -98,32 +19,13 @@ public class HipsterHighway extends JPanel{
     public static void main(String[] args) {
         // TODO code application logic here
         //System objects
-        //Scanner in = new Scanner(System.in);
-        //String charName;
-    	//String input;
-    	JFrame f = new JFrame("HipsterHighway");
-    	f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        MainMenu m = new MainMenu();
-        HelpMenu h = new HelpMenu();
-        f.add(m);
-        f.setSize(550,550);
-        f.setVisible(true);
-        String input = JOptionPane.showInputDialog("");
-        System.out.println(input);
-        if (input.equals("4")){
-        	f.add(h);
-        	f.setVisible(true);
-        }
-        //m.UserInput(f);
-        
-       
+        Scanner in = new Scanner(System.in);
+        String charName;
         
         //variables
-        //boolean running = true;
+        boolean running = true;
         
-        //System.out.println
-        
-        /*String welcome = ("===========================================\n"
+        System.out.println("===========================================\n"
                           +"---             Welcome to              ---\n"
                           +"---           Adventure Trail           ---\n"
                           +"---                                     ---\n"
@@ -134,12 +36,11 @@ public class HipsterHighway extends JPanel{
                           +"---                                     ---\n"
                           +"---                                     ---\n"
                           +"===========================================");
+        in.nextLine();
         
-        in.nextLine();*/
-        
-        //MENU:
-        //while(running) {
-            /*System.out.println("===========================================\n"
+        MENU:
+        while(running) {
+            System.out.println("===========================================\n"
                               +"---             Welcome to              ---\n"
                               +"---           Adventure Trail           ---\n"
                               +"---                                     ---\n"
@@ -208,10 +109,10 @@ public class HipsterHighway extends JPanel{
                                   +"---    Hayden, Christy, and David       ---\n"
                                   +"---                                     ---\n"
                                   +"---                                     ---\n"
-                                  +"===========================================")*/;
-                //running = false;
-            //}
-        //}
+                                  +"===========================================");
+                running = false;
+            }
+        }
     }
     
 }
