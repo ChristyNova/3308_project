@@ -7,7 +7,6 @@
 
 import java.util.Scanner;
 import java.awt.*;
-import javax.swing.JOptionPane;
 import javax.swing.*;
 
 
@@ -15,8 +14,8 @@ import javax.swing.*;
  *
  * @author hayden, David
  */
-public class HipsterHighway extends JPanel
-{
+public class HipsterHighway extends JPanel{
+
 	
 	
 	String NameCharacter = ("===========================================\n"
@@ -86,10 +85,17 @@ public class HipsterHighway extends JPanel
     	JFrame f = new JFrame("HipsterHighway");
     	f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         MainMenu m = new MainMenu();
+        HelpMenu h = new HelpMenu();
         f.add(m);
         f.setSize(550,550);
         f.setVisible(true);
-        m.UserInput();
+        String input = JOptionPane.showInputDialog("");
+        System.out.println(input);
+        if (input.equals("4")){
+        	f.add(h);
+        	f.setVisible(true);
+        }
+        //m.UserInput(f);
         
        
         

@@ -16,10 +16,11 @@ public class HelpMenu extends JPanel{
 		g.drawLine(50, 50, 50, 500);
 		g.drawLine(50,500,500,500);
 		g.drawLine(500, 500, 500, 50);
-		for(int i = 0;i < 6;i++){
+		for(int i = 0;i < 7;i++){
 			g.drawString(menu[i],a , b);
 			b = b + 20;
 		}
+		//repaint();
 		//input = JOptionPane.showInputDialog("");
 		//if(input == "1"){
 			//g.drawString(NameCharacter, 50, 50);
