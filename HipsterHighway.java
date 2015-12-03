@@ -11,9 +11,15 @@ import javax.swing.JOptionPane;
 import javax.swing.*;
 
 
+/* In order to use jPanel and painting:
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+*/
+
 /**
  *
- * @author hayden, David
+ * @author hayden, David, Christy 
  */
 public class HipsterHighway extends JPanel
 {
@@ -59,9 +65,17 @@ public class HipsterHighway extends JPanel
 		return input;
 	}*/
 	
+
+
+
+//USING JPANEL and painting:
+
 	/*public void paintComponent(Graphics g){
 		super.paintComponent(g);
 		this.setBackground(Color.WHITE);
+		// This method is inherited from Component.
+   		// We over-write this method so we can
+   		// define our own graphics that we wish to paint on the the panel.
 		g.setColor(Color.BLACK);
 		g.drawLine(50, 50, 500, 50);
 		g.drawLine(50, 50, 50, 500);
@@ -71,6 +85,11 @@ public class HipsterHighway extends JPanel
 		//input = JOptionPane.showInputDialog("");
 		//if(input == "1"){
 			//g.drawString(NameCharacter, 50, 50);
+
+
+		Font f = g.getFont();			// retrieve current font
+		g.setFont(new Font("Serif", Font.ITALICS, 12)); 
+
 		//}
 	}*/
 
