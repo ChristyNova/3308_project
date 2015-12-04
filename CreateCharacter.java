@@ -1,12 +1,19 @@
-import java.util.Scanner;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package hipsterhighway;
+
 import java.awt.*;
-import javax.swing.JOptionPane;
 import javax.swing.*;
 
 public class CreateCharacter extends JPanel{
 	
-	String menu[] = {"Welcome to Hipster Highway","1. Create Character","2. New Game","3. Load Game","4. Help","To quit at any time, just click the x on this window"};
-	int a = 100;
+	String menu[] = {"Welcome to Hipster Highway","","","Please Enter your Character's name:","",""};
+	String input = "Name";
+        String Character[] = { "That's a great name!", "See you on the trail " + input};
+        int a = 100;
 	int b = 100;
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
@@ -19,10 +26,6 @@ public class CreateCharacter extends JPanel{
 		for(int i = 0;i < 6;i++){
 			g.drawString(menu[i],a , b);
 			b = b + 20;
-		}
-		//input = JOptionPane.showInputDialog("");
-		//if(input == "1"){
-			//g.drawString(NameCharacter, 50, 50);
-		//}
+                }
 	}
 }
