@@ -3,10 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//package HipsterHighway;
+package hipsterhighway;
 
-import java.util.Scanner;
-import java.awt.*;
 import javax.swing.*;
 
 
@@ -105,11 +103,25 @@ public class HipsterHighway extends JPanel{
     	f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         MainMenu m = new MainMenu();
         HelpMenu h = new HelpMenu();
+        CreateCharacter c = new CreateCharacter();
+        WelcomeName w = new WelcomeName();
         f.add(m);
         f.setSize(550,550);
         f.setVisible(true);
-        String input = JOptionPane.showInputDialog("");
+        String input;
+            input = JOptionPane.showInputDialog("");
         System.out.println(input);
+        if (input.equals("1")){
+            f.add(c);
+            f.setVisible(true);
+            String name;
+                name = JOptionPane.showInputDialog("");
+            System.out.println(name);
+            f.add(w);
+            w.welcomeName(name);
+            
+            f.setVisible(true);
+        }
         if (input.equals("4")){
         	f.add(h);
         	f.setVisible(true);
@@ -215,3 +227,4 @@ public class HipsterHighway extends JPanel{
     }
     
 }
+
