@@ -47,6 +47,6 @@ public class Map extends JPanel{
 			b = b + 20;
                 }
                         */
-                g.drawImage(image, 0, 0, 1356, 759, null);
+                g.drawImage(image, 0, 0, null);
         }
 }
