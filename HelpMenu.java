@@ -25,6 +25,7 @@ public class HelpMenu extends JPanel{
 			g.drawString(menu[i],a , b);
 			b = b + 20;
 		}
+                b=100;
 		//repaint();
 		//input = JOptionPane.showInputDialog("");
 		//if(input == "1"){

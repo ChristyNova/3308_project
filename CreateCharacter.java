@@ -11,8 +11,6 @@ import javax.swing.*;
 public class CreateCharacter extends JPanel{
 	
 	String menu[] = {"Welcome to Hipster Highway","","","Please Enter your Character's name:","",""};
-	String input = "Name";
-        String Character[] = { "That's a great name!", "See you on the trail " + input};
         int a = 100;
 	int b = 100;
 	public void paintComponent(Graphics g){

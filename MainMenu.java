@@ -45,6 +45,7 @@ public class MainMenu extends JPanel{
 			b = b + 20;
 		}
 		g.drawImage(image, 225, 0, 50, 50, null);
+                b=100;
 	}
 	public void UserInput(JFrame f){
 		//String input = JOptionPane.showInputDialog("");
