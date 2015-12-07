@@ -60,7 +60,10 @@ public class HipsterHighway extends JPanel{
         HelpMenu h = new HelpMenu();
         CreateCharacter c = new CreateCharacter();
         WelcomeName w = new WelcomeName();
-        while(true) {
+        CreateTranspo t = new CreateTranspo();
+        RunGame r = new RunGame();
+        boolean running = true;
+        while(running) {
             f.add(m);
             f.setSize(550,550);
             f.setVisible(true);
@@ -69,6 +72,8 @@ public class HipsterHighway extends JPanel{
             System.out.println(input);
             switch (input) {
                 case "1":
+                    f.remove(m);
+                    f.setVisible(false);
                     f.add(c);
                     f.setVisible(true);
                     String name;
@@ -82,11 +87,19 @@ public class HipsterHighway extends JPanel{
                     int profession;
                         profession = Integer.parseInt(JOptionPane.showInputDialog("Please enter the number for your profession:"));
                     CharacterInfo.setProfession(profession);
+                    f.setVisible(false);
+                    f.add(t);
+                    f.setVisible(true);
                     f.remove(w);
+                    int transpo;
+                        transpo = Integer.parseInt(JOptionPane.showInputDialog("Please enter the number for your transportation:"));
+                    CharacterInfo.setTranspo(transpo);
+                    f.remove(t);
                     f.setVisible(false);
                     break;
                 case "2":
-                    System.out.println("Coming soon");
+                    r.RunGame();
+                    //System.out.println("Coming soon");
                     break;
                 case "3":
                     System.out.println("Coming soon");
@@ -102,6 +115,12 @@ public class HipsterHighway extends JPanel{
                     f.remove(h);
                     f.setVisible(false);
                     break;
+                case "quit":
+                    running = false;
+                    f.dispose();
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Please enter a number, or 'quit' to exit");
                 }
             }
         }

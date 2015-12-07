@@ -13,6 +13,9 @@ public class CharacterInfo {
     private static String name;
     private static int profession;
     private static String professionName;
+    private static int transpo;
+    private static String transpoName;
+    
     
     public static void setName(String input) {
         name = input;
@@ -40,11 +43,37 @@ public class CharacterInfo {
             System.out.println("Setting profession to: " + professionName);
         }
     }
+    public static void setTranspo(int input) {
+        if(input == 1){
+            transpo = 1;
+            transpoName = "Bio Diesel Conversion";
+            System.out.println("Setting transportation to: " + transpoName);      
+        }
+        else if(input == 2) {
+            transpo = 2;
+            transpoName = "Fixie";
+            System.out.println("Setting transportation to: " + transpoName);
+        }
+        else if(input == 3) {
+            transpo = 3;
+            transpoName = "Hitchhike";
+            System.out.println("Setting transportation to: " + transpoName);
+        }
+    }
     public String getName() {
         return name;
     }
     public int getProfession() {
         return profession;
+    }
+    public String getProfessionName() {
+        return professionName;
+    }
+    public int getTranspo() {
+        return transpo;
+    }
+    public String getTranspoName() {
+        return transpoName;
     }
 }
 
