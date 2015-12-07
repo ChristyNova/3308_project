@@ -19,52 +19,6 @@ import javax.swing.JPanel;
  * @author hayden, David, Christy 
  */
 public class HipsterHighway extends JPanel{
-
-	
-	
-	String NameCharacter = ("===========================================\n"
-            +"---             Welcome to              ---\n"
-            +"---           Adventure Trail           ---\n"
-            +"---                                     ---\n"
-            +"---  Please enter your character's      ---\n"
-            +"---  name:                              ---\n"
-            +"---                                     ---\n"
-            +"---                                     ---\n"
-            +"---                                     ---\n"
-            +"---                                     ---\n"
-            +"===========================================");
-	/*String NameCheck = ("===========================================\n"
-            +"---             Welcome to              ---\n"
-            +"---           Adventure Trail           ---\n"
-            +"---                                     ---\n"
-            +"---         That's a great name!        ---\n"
-            +"---     See you on the trail " + input +"!    ---\n"
-            +"---                                     ---\n"
-            +"---                                     ---\n"
-            +"---                                     ---\n"
-            +"---                                     ---\n"
-            +"===========================================");*/
-	String NewGame = ("New game coming soon!");
-	String LoadGame = ("Load game coming soon!");
-	String Help = ("===========================================\n"
-            +"---                 HELP                ---\n"
-            +"--- In this game, the computer will     ---\n"
-            +"--- give you a few options for actions  ---\n"
-            +"--- on every turn. Simply type the      ---\n"
-            +"--- instruction that corresponds to the ---\n"
-            +"--- action and press enter.             ---\n"
-            +"---     Good Luck and Happy Trails!     ---\n"
-            +"---                                     ---\n"
-            +"---       Press enter to continue       ---\n"
-            +"===========================================");
-	/*public static String UserInput(JFrame f){
-		String input = JOptionPane.showInputDialog(f, "");
-		return input;
-	}*/
-	
-
-
-
 //USING JPANEL and painting:
 
 	/*public void paintComponent(Graphics g){
@@ -101,54 +55,75 @@ public class HipsterHighway extends JPanel{
     	//String input;
     	JFrame f = new JFrame("HipsterHighway");
     	f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //CharacterInfo charInfo = new CharacterInfo();
         MainMenu m = new MainMenu();
         HelpMenu h = new HelpMenu();
         CreateCharacter c = new CreateCharacter();
         WelcomeName w = new WelcomeName();
-        f.add(m);
-        f.setSize(550,550);
-        f.setVisible(true);
-        String input;
-            input = JOptionPane.showInputDialog("");
-        System.out.println(input);
-        if (input.equals("1")){
-            f.add(c);
+        CreateTranspo t = new CreateTranspo();
+        RunGame r = new RunGame();
+        boolean running = true;
+        while(running) {
+            f.add(m);
+            f.setSize(550,550);
             f.setVisible(true);
-            String name;
-                name = JOptionPane.showInputDialog("");
-            System.out.println(name);
-            f.add(w);
-            w.welcomeName(name);
-            
-            f.setVisible(true);
+            String input;
+                input = JOptionPane.showInputDialog("");
+            System.out.println(input);
+            switch (input) {
+                case "1":
+                    f.remove(m);
+                    f.setVisible(false);
+                    f.add(c);
+                    f.setVisible(true);
+                    String name;
+                    name = JOptionPane.showInputDialog("");
+                    CharacterInfo.setName(name);
+                    System.out.println(name);
+                    f.setVisible(false);
+                    f.add(w);
+                    f.setVisible(true);
+                    f.remove(c);
+                    int profession;
+                        profession = Integer.parseInt(JOptionPane.showInputDialog("Please enter the number for your profession:"));
+                    CharacterInfo.setProfession(profession);
+                    f.setVisible(false);
+                    f.add(t);
+                    f.setVisible(true);
+                    f.remove(w);
+                    int transpo;
+                        transpo = Integer.parseInt(JOptionPane.showInputDialog("Please enter the number for your transportation:"));
+                    CharacterInfo.setTranspo(transpo);
+                    f.remove(t);
+                    f.setVisible(false);
+                    break;
+                case "2":
+                    r.RunGame();
+                    //System.out.println("Coming soon");
+                    break;
+                case "3":
+                    System.out.println("Coming soon");
+                    break;
+                case "4":
+                    f.add(h);
+                    f.setVisible(true);
+                    
+                    //int cont = 1;
+                    
+                        JOptionPane.showMessageDialog(null, "Click to continue");
+                    
+                    f.remove(h);
+                    f.setVisible(false);
+                    break;
+                case "quit":
+                    running = false;
+                    f.dispose();
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Please enter a number, or 'quit' to exit");
+                }
+            }
         }
-        if (input.equals("4")){
-        	f.add(h);
-        	f.setVisible(true);
-        }
-        //m.UserInput(f);
-        
-       
-        
-        //variables
-        //boolean running = true;
-        
-        //System.out.println
-        
-        /*String welcome = ("===========================================\n"
-                          +"---             Welcome to              ---\n"
-                          +"---           Adventure Trail           ---\n"
-                          +"---                                     ---\n"
-                          +"---                                     ---\n"
-                          +"---                                     ---\n"
-                          +"---                                     ---\n"
-                          +"---       Press enter to continue       ---\n"
-                          +"---                                     ---\n"
-                          +"---                                     ---\n"
-                          +"===========================================");
-        
-        in.nextLine();*/
-        
         //MENU:
         //while(running) {
             /*System.out.println("===========================================\n"
@@ -220,11 +195,10 @@ public class HipsterHighway extends JPanel{
                                   +"---    Hayden, Christy, and David       ---\n"
                                   +"---                                     ---\n"
                                   +"---                                     ---\n"
-                                  +"===========================================")*/;
+                                  +"===========================================")*/
                 //running = false;
             //}
-        //}
+        //}  
     }
-    
-}
+
 

@@ -29,9 +29,9 @@ public class MainMenu extends JPanel{
 		System.out.println("Image not found");
 	}
 	}
-	String menu[] = {"Welcome to Hipster Highway","1. Create Character","2. New Game","3. Load Game","4. Help","To quit at any time, just click the x on this window"};
+	String menu[] = {"Welcome to Hipster Highway","1. Create Character","2. New Game","3. Load Game","4. Help","To quit at any time, type quit into the input box", "or click cancel and the the x on the main window"};
 	int a = 100;
-	int b = 100;
+	int b = 200;
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
 		this.setBackground(Color.WHITE);
@@ -40,11 +40,12 @@ public class MainMenu extends JPanel{
 		g.drawLine(50, 50, 50, 500);
 		g.drawLine(50,500,500,500);
 		g.drawLine(500, 500, 500, 50);
-		for(int i = 0;i < 6;i++){
+		for(int i = 0;i < 7;i++){
 			g.drawString(menu[i],a , b);
 			b = b + 20;
 		}
 		g.drawImage(image, 225, 0, 50, 50, null);
+                b=200;
 	}
 	public void UserInput(JFrame f){
 		//String input = JOptionPane.showInputDialog("");
